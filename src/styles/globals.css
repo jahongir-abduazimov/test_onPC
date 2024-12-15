@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: BeVietnamPro;
+  src: url("../../public/font/BeVietnamPro-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: BeVietnamPro;
+  src: url("../../public/font/BeVietnamPro-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: BeVietnamPro;
+  src: url("../../public/font/BeVietnamPro-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: BeVietnamPro;
+  src: url("../../public/font/BeVietnamPro-Bold.ttf");
+  font-weight: 700;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "BeVietnamPro", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-dots-class {
+  display: flex !important;
+  gap: 7px !important;
+  position: absolute !important;
+  left: 7%;
+  @apply bottom-[5%] md:bottom-[10%];
+}
+
+.main-dots-class li button {
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  color: transparent;
+  transition-duration: 0.5s;
+  @apply w-1 h-1 md:w-2 md:h-2;
+}
+
+.main-dots-class .slick-active button {
+  width: 24px;
+  height: 8px;
+  border-radius: 6px;
+  background: #ff0000 !important;
+  @apply h-1 w-3.5 md:h-2 md:w-6;
+}
+
+.discount-dots-class {
+  display: flex !important;
+  justify-content: center;
+  gap: 10px !important;
+  margin-top: 10px;
+}
+
+.discount-dots-class li button {
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  cursor: pointer;
+  color: transparent;
+  transition-duration: 0.5s;
+  @apply w-1 h-1 md:w-2 md:h-2;
+}
+
+.discount-dots-class .slick-active button {
+  width: 20px;
+  height: 8px;
+  border-radius: 6px;
+  background: #ff0000 !important;
+  @apply h-1 w-3.5 md:h-2 md:w-6;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.liked-product-price {
+  transition-duration: 0.15s;
+}
+
+.liked-product:hover .liked-product-price {
+  @apply lg:-translate-x-[100%];
+}
+
+.liked-product-buttons {
+  transition-duration: 0.15s;
+}
+
+.liked-product:hover .liked-product-buttons {
+  @apply lg:-translate-x-[100%] lg:pl-0;
+}
+
+/* Navigate loading line */
+#nprogress .bar {
+  @apply bg-[#071B3B] h-[3px];
+}
+
+.liked-product:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000001f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #081c3c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000;
+}
+
+/* AB Range Slider */
+#range-slider-ab .range-slider__range {
+  background: #ff4141;
+}
+
+#range-slider-ab .range-slider__thumb[data-lower] {
+  background: #ff4141;
+}
+
+#range-slider-ab .range-slider__thumb[data-upper] {
+  background: #ff4141;
+}
